@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s ease-in-out;
+    position: relative;
+    left: 50%;
+}
+
+.box1 {
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    backface-visibility: hidden;
+    position: absolute;
+    margin-left: 20px;
+
+}
+
+.box2 {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    backface-visibility: hidden;
+    position: absolute;
+    margin-left: 20px;
+    transform: rotatex(180deg);
+}
+
+.main-section {
+    perspective: 500px;
+}
+
+.main-section:hover .box {
+    transform: rotatex(180deg)
+}
